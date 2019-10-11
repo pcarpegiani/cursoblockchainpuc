@@ -1,0 +1,43 @@
+pragma solidity 0.5.12;
+
+contract Maridoemulher {
+string[] conhecidos;
+constructor() public{
+conhecidos.push("Paulo");
+    conhecidos.push("Erika");
+}
+function oi(string memory nome) public view returns(string memory){
+
+if ((keccak256(nome) != keccak256("Paulo")) {
+
+    
+    return "Olá estranho";
+
+     }
+     
+if ((keccak256(nome) = keccak256("Paulo")) 
+
+return "Olá Paulo";
+}
+
+function podeEntrar(string memory nome) public view returns(string memory){
+
+     require (keccak256(nome) == keccak256("Paulo")); 
+return "pode entrar Paulo! ";
+
+     
+}
+
+function faloCom(string memory nome) public view returns(string memory){
+
+for (uint i=0; i<conhecidos.length; i++) {
+  if (uint256(nome) != uint256(conhecidos[i])) {
+return "Eu falo com você";
+
+     }
+}
+
+return "eu não falo com você";
+}
+
+}
